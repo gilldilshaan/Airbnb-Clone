@@ -1,0 +1,44 @@
+<% layout("/layouts/boilorplate") %>
+
+<h3>Create New Listing</h3>
+
+<form action="/listings" method="POST">
+
+  <div class="mb-3">
+    <label>Title:</label>
+    <input type="text" name="title" class="form-control" required>
+  </div>
+
+  <div class="mb-3">
+    <label>Description:</label>
+    <textarea name="description" class="form-control" required></textarea>
+  </div>
+
+  <div class="mb-3">
+    <label>Image URL:</label>
+    <input type="text" name="image" class="form-control" required>
+  </div>
+
+  <div class="mb-3">
+    <label>Price:</label>
+    <input type="number" name="price" class="form-control" required>
+  </div>
+
+  <div class="mb-3">
+    <label>Location:</label>
+    <input 
+    type="text" 
+    name="location" 
+    class="form-control" 
+    placeholder="Enter location" 
+    required>
+  </div>
+
+  <div class="mb-3">
+    <label>Country:</label>
+    <input type="text" name="country" class="form-control" required>
+  </div>
+
+  <button class="btn btn-dark">Create Listing</button>
+
+</form>

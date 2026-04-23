@@ -1,35 +1,54 @@
-<form action="/listings/<%= listing._id %>?_method=PUT" method="POST">
+<% layout("/layouts/boilorplate") %>
+<form action="/listings/<%= listing._id %>?_method=PUT" method="POST" novalidate class="needs-validation">
 
   <div>
     <label>Title:</label>
     <input type="text" name="title" value="<%= listing.title %>" class="form-control" required>
+    <div class="invalid-feedback">Please enter a title</div>
+    <div class="valid-feedback">Title Looks Good!</div>
   </div><br>
 
   <div>
     <label>Description:</label>
-    <textarea name="description" class="form-control"><%= listing.description %></textarea>
+    <textarea name="description" 
+    class="form-control" required><%= listing.description %></textarea>
+    <div class="invalid-feedback">Please enter a description</div>
+    <div class="valid-feedback">Description Looks Good!</div>
   </div><br>
 
   <div>
     <label>Image Link:</label>
-    <input type="text" name="image" value="<%= listing.image.url %>" class="form-control">
+    <input type="text" name="image"
+     value="<%= listing.image.url %>" class="form-control" required>
+    <div class="invalid-feedback">Please enter an image link</div>
+    <div class="valid-feedback">Image Link Looks Good!</div>
   </div><br>
 
   <div>
     <label>Price:</label>
-    <input type="number" name="price" value="<%= listing.price %>" class="form-control">
+    <input type="number"
+     name="price" value="<%= listing.price %>" class="form-control" required>
+    <div class="invalid-feedback">Please enter a price</div>
+    <div class="valid-feedback">Price Looks Good!</div>
   </div><br>
 
   <div>
     <label>Location:</label>
-    <input type="text" name="location" value="<%= listing.location %>" class="form-control">
+    <input type="text"
+     name="location" value="<%= listing.location %>" class="form-control" required>
+    <div class="invalid-feedback">Please enter a location</div>
+    <div class="valid-feedback">Location Looks Good!</div>
   </div><br>
 
   <div>
     <label>Country:</label>
-    <input type="text" name="country" value="<%= listing.country %>" class="form-control">
+    <input type="text" name="country" 
+    value="<%= listing.country %>" class="form-control" required>
+    <div class="invalid-feedback">Please enter a country</div>
+    <div class="valid-feedback">Country Looks Good!</div>
   </div><br>
 
   <button class="btn add-btn">Update Listing</button>
 
 </form>
+<script src="/javascript/validation.js"></script>

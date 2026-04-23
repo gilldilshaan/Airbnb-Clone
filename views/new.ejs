@@ -2,41 +2,53 @@
 
 <h3>Create New Listing</h3>
 
-<form action="/listings" method="POST">
+<form action="/listings" novalidate method="POST" class="needs-validation">
 
   <div class="mb-3">
     <label>Title:</label>
     <input type="text" name="title" class="form-control" required>
+    <div class="invalid-feedback">Please enter a title</div>
+    <div class="valid-feedback">Title Looks Good!</div>
   </div>
 
   <div class="mb-3">
     <label>Description:</label>
     <textarea name="description" class="form-control" required></textarea>
+    <div class="invalid-feedback">Please enter description</div>
+    <div class="valid-feedback">Description Looks Good!</div>
   </div>
 
   <div class="mb-3">
     <label>Image URL:</label>
-    <input type="text" name="image" class="form-control" required>
+    <input type="text" name="image" class="form-control">
+    <div class="invalid-feedback">Please enter image URL</div>
+    <div class="valid-feedback">Image URL Looks Good!</div>
   </div>
 
   <div class="mb-3">
     <label>Price:</label>
     <input type="number" name="price" class="form-control" required>
+    <div class="invalid-feedback">Please enter price</div>
+    <div class="valid-feedback">Price Looks Good!</div>
   </div>
 
   <div class="mb-3">
     <label>Location:</label>
     <input 
-    type="text" 
-    name="location" 
-    class="form-control" 
-    placeholder="Enter location" 
-    required>
+      type="text" 
+      name="location" 
+      class="form-control" 
+      placeholder="Enter location" 
+      required>
+    <div class="invalid-feedback">Please enter location</div>
+    <div class="valid-feedback">Location Looks Good!</div>
   </div>
 
   <div class="mb-3">
     <label>Country:</label>
     <input type="text" name="country" class="form-control" required>
+    <div class="invalid-feedback">Please enter country</div>
+    <div class="valid-feedback">Country Looks Good!</div>
   </div>
 
   <button class="btn btn-dark">Create Listing</button>

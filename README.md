@@ -1,6 +1,6 @@
 # 🏡 Airbnb Clone
 
-A full stack web application inspired by Airbnb — built from scratch as part of my web development journey.
+A full stack web application inspired by Airbnb — built from scratch as part of my web development journey.Used MERN stack for it. 
 
 ## 🚀 Live Demo
 Coming soon
@@ -15,6 +15,7 @@ Soon
 - Delete listings
 - Fully responsive design
 - MVC architecture for clean code structure
+- Tried making requests less error prone
 
 ## 🛠️ Tech Stack
 
